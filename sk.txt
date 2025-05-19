@@ -1,0 +1,65 @@
+cd ~/ws/software/swv/platform/atomic-dog/image
+make CPU=x86_64 DEBUG=no BOARDS=nv40b
+cd ~/ws/software/swv/platform/atomic-dog/image/lin-nv40b-x86_64-r
+cp ~/710010000000.vkr .
+sudo PATH=$PATH:/home/marsad1/ws/software/exports/lin-vfr-x86_64-r/ ../rootfs/boot/install-tools/bvm-mkimg.sh -m monolith-nv40b-x86_64.jar -p nv40b -o monolith.vmdk -vkr 710011644926.vkr
+qemu-img convert monolith.vmdk -O raw ~/monolith.raw
+ 
+
+sudo PATH=$PATH:/root/software/exports/lin-vfr-x86_64-r/ ../rootfs/boot/install-tools/bvm-mkimg.sh -m monolith-nv40b-x86_64.jar -p nv40b -o monolith.vmdk -vkr 710011644928.vkr
+
+sudo PATH=$PATH:/root/Monolith_20Feb/software/exports/lin-vfr-x86_64-r/ ../rootfs/boot/install-tools/bvm-mkimg.sh -m monolith-nv40b-x86_64.jar -p nv40b -o monolith.vmdk -vkr 710011644928.vkr
+
+
+
+To run bvm-mkimg.sh with path:
+
+sudo PATH=$PATH:/root/software/exports/lin-vfr-x86_64-r/ ./bvm-mkimg.sh -m ../../../lin-nv40b-x86_64-r/monolith-nv40b-x86_64.jar -p nv40b -o ../../../lin-nv40b-x86_64-r/monolith.vmdk -vkr ../../../lin-nv40b-x86_64-r/710011644928.vkr
+
+
+
+https://spmogit03.exfo.com/brix/software.git      Cloning repo url
+
+
+make vverifier CPU=x86_64 DEBUG=no
+
+	
+/root/software/exports/lin-vfr-x86_64-d/linux-lastmile/lib/modules/3.18.12
+
+nv40b:
+     76     $(MAKE) -C swv/platform/atomic-dog/image/makefiles -f nv40b.makefile
+     77
+     78 bv110rev2:
+     79     $(MAKE) -C swv/platform/atomic-dog/image/makefiles -f bv110rev2.makefile
+     80
+     81 vverifier:
+     82     $(MAKE) -C swv/platform/atomic-dog/image/makefiles -f vverifier.makefile
+
+
+[root@prabindev linux-lastmile]# vim makefile
+[root@prabindev linux-lastmile]# make kernel-all
+
+
+../../../../../../software/vendors/linux/linux-3.18.12/arch/x86/kernel/x86_init.c
+
+
+
+ find . -type f -name "makefile" -exec grep -irl "vmlinuz-" {} \; | more
+
+
+
+
+  914  cp vmlinuz-3.18.12 /root/software/exports/lin-vfr-x86_64-r/linux-lastmile/
+  919  cd lin-vfr-x86_64-r/linux-lastmile/
+
+
+
+
+
+[root@prabindev boot]# pwd
+/root/software/vendors/linux/linux-adog/release-x86_64/arch/x86_64/boot
+
+[root@prabindev boot]# pwd
+/root/software/vendors/linux/linux-lastmile/debug-x86_64/arch/x86_64/boot
+[root@prabindev boot]# ls
+bzImage

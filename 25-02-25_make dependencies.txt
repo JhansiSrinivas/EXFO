@@ -1,0 +1,81 @@
+From here we copied from lin-vfr-x86_64-r to lin-vfr-x86_64-d
+
+
+bvm-verifier-agent
+find . -name "libswv-logger.so"
+
+find . -name "libswv-logger.so"
+
+/libswv-messaging.so
+
+exfo-memtool
+
+/sshd
+
+scp
+
+ssh-keygen
+
+lastmile-dma"
+
+lastmile-rawcardtool
+
+"lastmile-ethtool"
+
+lastmile-triumph
+
+"lastmile-turnup"
+
+"lastmile-timesvc"
+
+"lastmile-version"
+
+exfo-pci-control
+
+libpcap.so
+diags-eth-bvm
+
+diags-fcc-ethernet-bvm
+
+
+From here we copied from lin-nv40b-x86_64-r to lin-nv40b-x86_64-d
+[root@prabindev exports]# find . -name ""verifier-nv40b""
+./lin-nv40b-x86_64-r/verifier-nv40b
+[root@prabindev exports]#
+
+
+verifier-nv40b
+
+led-control
+
+ntpd
+
+ethtool
+
+
+
+
+ vi makefile
+[root@prabindev image-filter-merge]# vi makefile
+[root@prabindev image-filter-merge]# make
+make: *** No rule to make target `../../../exports/lin-vfr-x86_64-d/libxerces-c2_7.so', needed by `lin-gcc4-x86_64/image-filter-merge'.  Stop.
+[root@prabindev image-filter-merge]# pwd
+/root/software/swv/build-tools/image-filter-merge
+[root@prabindev image-filter-merge]#
+
+
+
+
+libxerces-c2_7.so copied to lin-vfr-x86_64-d
+
+
+
+ make
+../../../swv/build-tools/fileparse/lin-gcc4-x86_64/fileparse -i ../../../include/DTD/image-filter.dtd -o lin-gcc4-x86_64/image-filter-dtd.h --routine_name get_dtdfileinfo
+bash: ../../../swv/build-tools/fileparse/lin-gcc4-x86_64/fileparse: No such file or directory
+make: *** [lin-gcc4-x86_64/image-filter-dtd.h] Error 127
+[root@prabindev image-filter-merge]# pwd
+/root/software/swv/build-tools/image-filter-merge
+[root@prabindev image-filter-merge]#
+
+
